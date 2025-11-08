@@ -1,0 +1,789 @@
+/* Splash */
+
+.splash-root {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f0e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-logo {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 16px;
+}
+
+.splash-title {
+  font-size: 40px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #e0a73b, #b87720);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.03em;
+}
+
+.splash-subtitle {
+  margin-top: 4px;
+  font-size: 20px;
+  color: #c09136;
+}
+
+/* Generic page layout */
+
+.page-root {
+  min-height: 100vh;
+  background-color: #f5f0e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.signin-card,
+.simple-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px 18px 16px;
+  box-shadow: 0 14px 40px rgba(150, 111, 59, 0.12);
+  border: 1px solid rgba(224, 167, 59, 0.24);
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.mini-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.hint {
+  font-size: 12px;
+  color: #a3814e;
+  margin-bottom: 16px;
+}
+
+.google-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.user-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 12px;
+  font-size: 12px;
+  color: #7b5526;
+}
+
+.user-preview img {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+}
+
+.primary-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #b87720;
+  color: #fffaf0;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* -------- Onboarding screen -------- */
+
+.onboarding-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px;
+  background: linear-gradient(180deg,
+    #E8E3D6 0%,
+    #D4C4A8 25%,
+    #B89968 50%,
+    #D4C4A8 75%,
+    #E8E3D6 100%);
+  background-size: 100% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Header with logo */
+.onboarding-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.onboarding-logo {
+  width: 132px;
+  height: 132px;
+  object-fit: contain;
+}
+
+.onboarding-title-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #D4A854;
+  letter-spacing: -0.3px;
+}
+
+/* Center content */
+.onboarding-center {
+  flex: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+  padding: 40px 20px;
+}
+
+.onboarding-heading {
+  font-size: 56px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.onboarding-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Bottom section */
+.onboarding-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 40px;
+}
+
+/* Dots indicator */
+.onboarding-dots {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.onboarding-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(212, 168, 84, 0.3);
+  transition: all 0.3s ease;
+}
+
+.onboarding-dot-active {
+  width: 32px;
+  border-radius: 6px;
+  background-color: #D4A854;
+}
+
+/* Continue button */
+.onboarding-button {
+  width: 130%;
+  max-width: 420px;
+  height: 56px;
+  background-color: #D4A854;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.onboarding-button:hover {
+  background-color: #C19743;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.onboarding-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .onboarding-root {
+    padding: 32px 20px;
+  }
+
+  .onboarding-heading {
+    font-size: 44px;
+  }
+
+  .onboarding-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .onboarding-root {
+    padding: 24px 16px;
+  }
+
+  .onboarding-header {
+    margin-top: 10px;
+  }
+
+  .onboarding-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .onboarding-title-text {
+    font-size: 18px;
+  }
+
+  .onboarding-heading {
+    font-size: 36px;
+  }
+
+  .onboarding-subtitle {
+    font-size: 15px;
+  }
+
+  .onboarding-button {
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .onboarding-bottom {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .onboarding-heading {
+    font-size: 32px;
+  }
+
+  .onboarding-subtitle {
+    font-size: 14px;
+  }
+}
+/* LoginScreen.css */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E8E3D6;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.logo-container {
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-name {
+  font-size: 48px;
+  font-weight: 400;
+  color: #D4A854;
+  margin: 0;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.brand-subtitle {
+  font-size: 18px;
+  color: #D4A854;
+  margin: 0;
+  margin-bottom: 48px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.buttons-container {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.sign-in-button {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: transparent;
+  border: 1.5px solid #8B7355;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sign-in-button:hover {
+  background-color: rgba(139, 115, 85, 0.05);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sign-in-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.sign-in-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.google-button {
+  color: #3c4043;
+}
+
+.apple-button {
+  color: #000000;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.terms-container {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.terms-text {
+  font-size: 13px;
+  color: #5C5045;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.terms-link {
+  color: #8B6F47;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.terms-link:hover {
+  color: #6B5437;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 16px;
+  }
+
+  .brand-name {
+    font-size: 40px;
+  }
+
+  .brand-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .buttons-container {
+    max-width: 100%;
+  }
+
+  .sign-in-button {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-name {
+    font-size: 36px;
+  }
+
+  .brand-subtitle {
+    font-size: 15px;
+  }
+
+  .sign-in-button {
+    height: 46px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .terms-text {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-card {
+    padding: 60px 40px;
+  }
+
+  .buttons-container {
+    max-width: 360px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.sign-in-button:disabled {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* SignIn.css */
+.signin-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E8E3D6;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.signin-card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.logo-container {
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-name {
+  font-size: 48px;
+  font-weight: 400;
+  color: #D4A854;
+  margin: 0;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.brand-subtitle {
+  font-size: 18px;
+  color: #D4A854;
+  margin: 0;
+  margin-bottom: 48px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.buttons-container {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.sign-in-button {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: transparent;
+  border: 1.5px solid #8B7355;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sign-in-button:hover {
+  background-color: rgba(139, 115, 85, 0.05);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sign-in-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.sign-in-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.google-button {
+  color: #3c4043;
+}
+
+.apple-button {
+  color: #000000;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.terms-container {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.terms-text {
+  font-size: 13px;
+  color: #5C5045;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.terms-link {
+  color: #8B6F47;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.terms-link:hover {
+  color: #6B5437;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .signin-card {
+    padding: 30px 16px;
+  }
+
+  .brand-name {
+    font-size: 40px;
+  }
+
+  .brand-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .buttons-container {
+    max-width: 100%;
+  }
+
+  .sign-in-button {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-name {
+    font-size: 36px;
+  }
+
+  .brand-subtitle {
+    font-size: 15px;
+  }
+
+  .sign-in-button {
+    height: 46px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .terms-text {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .signin-card {
+    padding: 60px 40px;
+  }
+
+  .buttons-container {
+    max-width: 360px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.sign-in-button:disabled {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+
+
+/* ---------- Name Screen ---------- */
+
+.name-screen-root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    120deg,
+    #f5f0e6 0%,
+    #f8f3ea 40%,
+    #fdfaf6 100%
+  );
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.name-screen-content {
+  text-align: center;
+}
+
+.name-title {
+  margin: 0 0 8px;
+  font-size: 52px;
+  font-weight: 600;
+  color: #111827;
+  opacity: 0;
+}
+
+.name-subtitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: #6b7280;
+  opacity: 0;
+}
+
+/* common fade-in used via class */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* waving hand */
+.wave-emoji {
+  margin-left: 8px;
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 1.4s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(18deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}

@@ -1,0 +1,200 @@
+/* pages.css */
+
+/* Onboarding Screen */
+.onboarding-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px;
+  background: linear-gradient(180deg,
+    #E8E3D6 0%,
+    #D4C4A8 25%,
+    #B89968 50%,
+    #D4C4A8 75%,
+    #E8E3D6 100%);
+  background-size: 100% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Header with logo */
+.onboarding-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.onboarding-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.onboarding-title-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #D4A854;
+  letter-spacing: -0.3px;
+}
+
+/* Center content */
+.onboarding-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  padding: 40px 20px;
+}
+
+.onboarding-heading {
+  font-size: 56px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.onboarding-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Bottom section */
+.onboarding-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 40px;
+}
+
+/* Dots indicator */
+.onboarding-dots {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.onboarding-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(212, 168, 84, 0.3);
+  transition: all 0.3s ease;
+}
+
+.onboarding-dot-active {
+  width: 32px;
+  border-radius: 6px;
+  background-color: #D4A854;
+}
+
+/* Continue button */
+.onboarding-button {
+  width: 100%;
+  max-width: 320px;
+  height: 56px;
+  background-color: #D4A854;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.onboarding-button:hover {
+  background-color: #C19743;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.onboarding-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .onboarding-root {
+    padding: 32px 20px;
+  }
+
+  .onboarding-heading {
+    font-size: 44px;
+  }
+
+  .onboarding-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .onboarding-root {
+    padding: 24px 16px;
+  }
+
+  .onboarding-header {
+    margin-top: 10px;
+  }
+
+  .onboarding-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .onboarding-title-text {
+    font-size: 18px;
+  }
+
+  .onboarding-heading {
+    font-size: 36px;
+  }
+
+  .onboarding-subtitle {
+    font-size: 15px;
+  }
+
+  .onboarding-button {
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .onboarding-bottom {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .onboarding-heading {
+    font-size: 32px;
+  }
+
+  .onboarding-subtitle {
+    font-size: 14px;
+  }
+}
