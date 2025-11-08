@@ -8,7 +8,7 @@ const SignIn = () => {
   const GOOGLE_CLIENT_ID = '130321581049-ktqt7omporh5is930jmjpmmbaq5m5noi.apps.googleusercontent.com';
  const basePath =
    process.env.NODE_ENV === "production" ? "/vitty-web" : "";
- const REDIRECT_URI = `${window.location.origin}${basePath}/auth/callback`;
+ const REDIRECT_URI = 'https://vscmoney.github.io/vitty-web/auth/callback';
 
   const GOOGLE_AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
 
