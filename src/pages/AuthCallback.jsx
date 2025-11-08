@@ -12,11 +12,11 @@ const AuthCallback = () => {
 
     console.log("OAuth code:", code, "state:", state);
 
-    // TODO: yaha backend ko `code` bhejna hai aur real user fetch karna hai.
-    // DEMO: directly Welcome pe bhej dete hain:
+    // TODO: yaha backend ko `code` bhejna hai.
+    // Abhi demo ke liye direct name screen:
     navigate("/welcome", {
       replace: true,
-      state: { name: "Ritik" },
+      state: { name: "Ritik" }
     });
   }, [location.search, navigate]);
 
@@ -28,7 +28,7 @@ const AuthCallback = () => {
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#f5f0e6",
-        fontFamily: "system-ui, -apple-system, sans-serif",
+        fontFamily: "system-ui, -apple-system, sans-serif"
       }}
     >
       <div>Finishing sign-in…</div>
