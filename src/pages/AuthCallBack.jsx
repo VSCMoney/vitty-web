@@ -2,19 +2,22 @@ import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const AuthCallback = () => {
-  const navigate = useNavigate();
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const code = params.get("code");
     const state = params.get("state");
 
-    console.log("Auth callback code:", code, "state:", state);
+    console.log("OAuth code:", code, "state:", state);
 
-    // TODO: yaha future me backend ko `code` bhejna hai.
-    // Abhi demo: fake name se Welcome pe bhej do
-    navigate("/welcome", { replace: true, state: { name: "Ritik" } });
+    // TODO: yaha backend ko `code` bhejna hai aur real user fetch karna hai.
+    // DEMO: directly Welcome pe bhej dete hain:
+    navigate("/welcome", {
+      replace: true,
+      state: { name: "Ritik" },
+    });
   }, [location.search, navigate]);
 
   return (
