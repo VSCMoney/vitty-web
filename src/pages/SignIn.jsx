@@ -6,7 +6,10 @@ const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const GOOGLE_CLIENT_ID = '130321581049-ktqt7omporh5is930jmjpmmbaq5m5noi.apps.googleusercontent.com';
-  const REDIRECT_URI = window.location.origin + '/auth/callback';
+ const basePath =
+   process.env.NODE_ENV === "production" ? "/vitty-web" : "";
+ const REDIRECT_URI = `${window.location.origin}${basePath}/auth/callback`;
+
   const GOOGLE_AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
 
   const generateCodeVerifier = () => {
