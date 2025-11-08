@@ -12,8 +12,8 @@ const AuthCallback = () => {
 
     console.log("OAuth code:", code, "state:", state);
 
-    // TODO: yaha backend ko `code` bhejna hai.
-    // Abhi demo ke liye direct name screen:
+    // TODO: yaha future me backend ko code bhejna hai.
+    // Abhi demo ke liye directly Welcome pe:
     navigate("/welcome", {
       replace: true,
       state: { name: "Ritik" }
