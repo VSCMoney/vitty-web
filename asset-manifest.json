@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/vitty-web/static/css/main.9aaa33c5.css",
-    "main.js": "/vitty-web/static/js/main.541ceab7.js",
+    "main.js": "/vitty-web/static/js/main.0c323a75.js",
     "index.html": "/vitty-web/index.html",
     "main.9aaa33c5.css.map": "/vitty-web/static/css/main.9aaa33c5.css.map",
-    "main.541ceab7.js.map": "/vitty-web/static/js/main.541ceab7.js.map"
+    "main.0c323a75.js.map": "/vitty-web/static/js/main.0c323a75.js.map"
   },
   "entrypoints": [
     "static/css/main.9aaa33c5.css",
-    "static/js/main.541ceab7.js"
+    "static/js/main.0c323a75.js"
   ]
 }
