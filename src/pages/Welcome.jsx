@@ -6,8 +6,6 @@ const Welcome = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Google se aaya hua naam yaha expect kar rahe.
-  // Agar nahi mila to demo ke liye "Ritik".
   const fullName = location.state?.name || "Ritik";
   const firstName = fullName.split(" ")[0];
 
@@ -15,18 +13,21 @@ const Welcome = () => {
   const [showSubtitle, setShowSubtitle] = useState(false);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setShowTitle(true), 100);   // title fade
-    const t2 = setTimeout(() => setShowSubtitle(true), 700); // subtitle after
-
-    // optional: auto-next after few sec
-    // const t3 = setTimeout(() => navigate("/home"), 2600);
+    const t1 = setTimeout(() => setShowTitle(true), 100);
+    const t2 = setTimeout(() => setShowSubtitle(true), 700);
+    const t3 = setTimeout(() => {
+      navigate("/profile", {
+        replace: true,
+        state: { name: fullName },
+      });
+    }, 2000); // 2 sec ke baad Q1
 
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
-      // clearTimeout(t3);
+      clearTimeout(t3);
     };
-  }, [navigate]);
+  }, [navigate, fullName]);
 
   return (
     <div className="name-screen-root">
@@ -35,7 +36,11 @@ const Welcome = () => {
           Hi, {firstName}
           <span className="wave-emoji">👋🏻</span>
         </h1>
-        <p className={`name-subtitle ${showSubtitle ? "fade-in-up" : ""}`}>
+        <p
+          className={`name-subtitle ${
+            showSubtitle ? "fade-in-up" : ""
+          }`}
+        >
           Let&apos;s get to know you better
         </p>
       </div>

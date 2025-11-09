@@ -1,6 +1,6 @@
 // Onboarding.jsx
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/pages.css";
 
 const slides = [
@@ -23,21 +23,52 @@ const slides = [
 
 const Onboarding = () => {
   const [index, setIndex] = useState(0);
+  const [heroPhase, setHeroPhase] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const logoSrc = process.env.PUBLIC_URL + "/vitty_logo.png";
+
+  // Detect if we came from Splash
+  useEffect(() => {
+    if (location.state?.fromSplash) {
+      // start hero animation
+      setHeroPhase("start");
+
+      // clear history state so refresh/back pe dubara na ho
+      window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+      );
+
+      // next frame -> move to end position
+      requestAnimationFrame(() => {
+        setHeroPhase("end");
+      });
+    }
+  }, [location.state]);
 
   const handleContinue = () => {
     if (index < slides.length - 1) {
-      setIndex(index + 1);
+      setIndex((prev) => prev + 1);
     } else {
       navigate("/signin");
     }
   };
 
+  const logoClass =
+    heroPhase === "start"
+      ? "onboarding-logo hero-logo hero-start"
+      : heroPhase === "end"
+      ? "onboarding-logo hero-logo hero-end"
+      : "onboarding-logo";
+
   return (
     <div className="onboarding-root">
-      {/* Top logo */}
+      {/* Top logo (with optional hero animation) */}
       <div className="onboarding-header">
-        <img src="/vitty_logo.png" alt="Vitty.ai" className="onboarding-logo" />
+        <img src={logoSrc} alt="Vitty.ai" className={logoClass} />
       </div>
 
       {/* Center content */}

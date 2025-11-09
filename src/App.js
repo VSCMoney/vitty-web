@@ -6,6 +6,8 @@ import SignIn from "./pages/SignIn";
 import AuthCallback from "./pages/AuthCallback";
 import Welcome from "./pages/Welcome";
 import Home from "./pages/Home";
+import ProfileOnboarding from "./pages/ProfileOnboarding";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/auth/callback" element={<AuthCallback />} />
       <Route path="/welcome" element={<Welcome />} />
+      <Route path="/profile" element={<ProfileOnboarding />} />
       <Route path="/home" element={<Home />} />
     </Routes>
   );
